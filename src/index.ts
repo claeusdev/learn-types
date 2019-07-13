@@ -1,14 +1,19 @@
-//  be specific when declaring arrays
-let a: number[] = []
-a.push(33)
+// object types can be Expressed using {} and property names
+let a: {houseNumber: number; streetName: string}
+a = {
+    streetName: "Fale Street",
+    houseNumber: 909
+}
+// a = {
+//     streetName: "you dey play"
+// } wont work because both passed are required
+// Can use optional operator (?) to denote optionality
+let b: {houseNumber: number; streetName?: string}
 
-// let b = []
-// b.push(2) array of never, wont work
+// Interfaces to reuse object types
+interface Address {
+    houseNumber: number,
+    streetName?: string
+}
 
-
-// TUPLES
-// Array of fixed length
-
-let b: [number, string, string, number] = [
-    123, "Fake well", "Fake well", 10110
-]
+let c: Address = { houseNumber: 39}
