@@ -1,7 +1,22 @@
-let z;
-z = 23;
-z = "hello" // This is possible because "top types" can take any value
+export interface HasPhoneNumber {
+  name: string;
+  phone: number;
+}
+export interface HasEmail {
+  name: string;
+  email: string;
+}
 
-let x: number; // type annotation
-x = 40;
-// x = "abc"  won't work because type of variable defined above
+// Intersection types
+let contactInfo: HasEmail | HasPhoneNumber =
+  Math.random() > 0.5
+    ? { name: "Nana", phone: 209384092384 }
+    : { name: "Nana", email: "nana@example.com" };
+
+// union types
+
+let otherContactInfo: HasEmail & HasPhoneNumber = {
+    name: "Nana",
+    email: "nana@yahoo.com",
+    phone: 34908509489
+}
