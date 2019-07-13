@@ -1,7 +1,14 @@
-let z;
-z = 23;
-z = "hello" // This is possible because "top types" can take any value
+//  be specific when declaring arrays
+let a: number[] = []
+a.push(33)
 
-let x: number; // type annotation
-x = 40;
-// x = "abc"  won't work because type of variable defined above
+// let b = []
+// b.push(2) array of never, wont work
+
+
+// TUPLES
+// Array of fixed length
+
+let b: [number, string, string, number] = [
+    123, "Fake well", "Fake well", 10110
+]
